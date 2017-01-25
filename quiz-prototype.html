@@ -1,0 +1,68 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>quiz</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/quizyfillblank.css">
+
+  <style>
+  body{
+    font-family:Helvetica, Arial, Verdana;
+  }
+
+  .text-style1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:16px;
+    margin-top:20px;
+    text-align:center;
+    line-height:24px;
+  }
+
+  .text-style2{
+    font-style:italic;
+    color:#777;
+  }
+
+  .text-style3{
+    width:200px;
+    margin:auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  </style>
+
+</head>
+<body>
+  <div id="main" role="main">
+
+    <div id="tutorial-fillblank">
+      <div class="text-style2">Drag the items to the correct blank spaces<br>(the correct answers will appear once you drag the last item)</div>
+      <div id="fillblank-text" class='text-style1'></div><br><br>
+      <div id="fillblank-ph" class='text-style3'></div>
+    </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+
+  <script src="js/jquery.quizyfillblank.min.js"></script>
+
+  <script>
+    $('#tutorial-fillblank').quizyFillBlank({
+          textItems:['Gram +, Bacilli, Non-Spore-Forming, Aerobic',
+          '<br>Gram -, Diplococci, Anaerobic',
+          '<br>Gram -, Bacilli, Lactose Fermentation -, Oxidase +',
+          '<br>Gram +, Cocci, Anaerobic/Facultative, Catalase +, Coagulase +',''],
+          anItems:['Clostridium',
+          'Veillonella',
+          'Listeria',
+          'Streptococcus Pneumoniae',
+          'Pseudomonas',
+          'Staphylococcus Epidermidis',
+          'Staphylococcus Aureus' ],
+          anItemsCorrect:[2,1,4,6],
+          blockSize:150
+        });
+  </script>
+</body>
+</html>
